@@ -37,4 +37,9 @@
   animation: logo-spin infinite 20s linear;
 }
 
+.text-outline {
+  -webkit-text-stroke: 1px var(--color-primary);
+  color: transparent;
+}
+
 @import "tailwindcss";

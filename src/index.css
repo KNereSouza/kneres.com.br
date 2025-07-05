@@ -42,4 +42,15 @@
   color: transparent;
 }
 
+.about-background {
+  background-size: cover;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(10, 24, 46, 1) 0%,
+      rgba(10, 24, 46, 0.5) 50%,
+      rgba(10, 24, 46, 1) 100%
+    ),
+    url("/about.webp");
+}
+
 @import "tailwindcss";

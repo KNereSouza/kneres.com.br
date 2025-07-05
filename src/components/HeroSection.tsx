@@ -1,6 +1,6 @@
 export function HeroSection() {
   return (
-    <section className="font-sans-serif bg-[var(--color-secondary)] w-screen h-[calc(100vh-96px)] flex flex-col items-center justify-center text-center gap-8">
+    <section className="font-sans-serif bg-[var(--color-secondary)] w-screen h-screen flex flex-col items-center justify-center text-center gap-8">
       <p className="font-bold text-xl">Hi, i'm Kauã 👋🏼</p>
       <h1 className="font-bold text-6xl">
         <span className="text-outline outline-[var(--color-primary)] text-8xl">

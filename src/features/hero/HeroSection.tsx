@@ -1,9 +1,13 @@
+import styles from "./styles.module.css";
+
 export function HeroSection() {
   return (
-    <section className="font-sans-serif bg-[var(--color-secondary)] w-screen h-screen flex flex-col items-center justify-center text-center gap-8">
+    <section className="font-sans-serif bg-[var(--color-secondary)] w-screen h-screen flex flex-col items-center justify-center text-center gap-8 text-white">
       <p className="font-bold text-xl">Hi, i'm Kauã 👋🏼</p>
       <h1 className="font-bold text-6xl">
-        <span className="text-outline outline-[var(--color-primary)] text-8xl">
+        <span
+          className={`${styles.textOutline} outline-[var(--color-primary)] text-8xl`}
+        >
           FULLSTACK <br />
         </span>
         SOFTWARE ENGINEER <br />{" "}

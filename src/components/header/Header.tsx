@@ -1,5 +1,6 @@
-import Logo from "../assets/icon.svg";
+import Logo from "../../assets/icon.svg";
 import { useEffect, useRef, useState } from "react";
+import styles from "./styles.module.css";
 
 export function Header() {
   const [show, setShow] = useState(true);
@@ -23,7 +24,7 @@ export function Header() {
 
   return (
     <div
-      className={`fixed w-screen z-30 transition-transform duration-500 ${
+      className={`fixed w-screen z-30 transition-transform duration-500 text-white ${
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -40,7 +41,11 @@ export function Header() {
         "
       >
         <a href="/">
-          <img src={Logo} className="w-16 logo logo-spin" alt="KNereS Logo" />
+          <img
+            src={Logo}
+            className={`w-16 ${styles.logo} ${styles.logoSpin}`}
+            alt="KNereS Logo"
+          />
         </a>
 
         <nav

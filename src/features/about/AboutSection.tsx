@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import styles from "./styles.module.css";
 
 export function AboutSection() {
   return (
@@ -83,7 +84,9 @@ export function AboutSection() {
           </a>
         </div>
       </div>
-      <div className="absolute z-0 about-background blur-sm w-screen h-screen"></div>
+      <div
+        className={`absolute z-0 ${styles.aboutBackground} blur-sm w-screen h-screen`}
+      ></div>
     </section>
   );
 }

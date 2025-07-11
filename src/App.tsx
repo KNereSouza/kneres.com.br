@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import myLogo from "./assets/icon.svg";
+import "./App.css";
+import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
+import Typewriter from "typewriter-effect";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export function App() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+      <div className="main-content">
+        <a href="https://www.instagram.com/neres.js/" target="_blank">
+          <img
+            src={myLogo}
+            className="logo apply-logo-spin"
+            alt="KNereS Logo"
+          />
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>Available Soon...</h1>
+        <div className="links">
+          <a
+            href="https://www.linkedin.com/in/kneresouza/"
+            className="link"
+            target="_blank"
+          >
+            <FaLinkedinIn />
+          </a>
+          <a
+            href="https://github.com/KNereSouza"
+            className="link"
+            target="_blank"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.instagram.com/neres.js/"
+            className="link"
+            target="_blank"
+          >
+            <FaInstagram />
+          </a>
+        </div>
+        <Typewriter
+          options={{
+            strings: [
+              "npx create-vite@latest",
+              "npm run dev",
+              "code . && coffee ☕",
+              "git push -u origin main",
+            ],
+            autoStart: true,
+            loop: true,
+            deleteSpeed: 50,
+          }}
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="background"></div>
     </>
-  )
+  );
 }
-
-export default App

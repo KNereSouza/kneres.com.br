@@ -1,21 +1,103 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #64ffda;
+  --color-secondary: #0a182e;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-space-mono: "Space Mono", monospace;
+}
+
+.font-sans-serif {
+  font-family: var(--font-space-grotesk);
+}
+
+.font-monospace {
+  font-family: var(--font-space-mono);
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100dvh;
+  overflow-x: hidden;
+}
+
+.main-content {
+  position: relative;
+  display: flex;
+  gap: 64px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100dvh;
+  font-family: var(--font-space-grotesk);
+  color: var(--color-primary);
+  z-index: 1;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  width: 128px;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 0.5em #61dafbcc);
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.apply-logo-spin {
+  animation: logo-spin infinite 20s linear;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+}
+
+.link {
+  display: flex;
+  padding: 0.5em;
+  color: var(--color-primary);
+  font-size: 28px;
+  outline: solid 1px var(--color-primary);
+  border-radius: 50%;
+  transition: 0.25s ease-in-out;
+}
+
+.link:hover {
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  filter: drop-shadow(0 0 0.5em #61dafb33);
+}
+
+.Typewriter {
+  font-family: var(--font-space-mono);
+}
+
+.background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(10, 24, 46, 1) 0%,
+      rgba(10, 24, 46, 0.95) 50%,
+      rgba(10, 24, 46, 1) 100%
+    ),
+    url("/src/assets/background.webp");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
 }
 
 @keyframes logo-spin {
@@ -25,18 +107,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

@@ -34,7 +34,7 @@ export function Header() {
         className="
           relative
           flex flex-row
-          pt-4 pb-4 pl-2 pr-2
+          pt-6 pb-6 pl-2 pr-2
           items-center
           justify-around
           font-sans-serif
@@ -62,7 +62,7 @@ export function Header() {
               transition-all
               hover:text-[var(--color-primary)]
             "
-            href="#about"
+            href="/#about"
           >
             ABOUT ME
           </a>
@@ -71,7 +71,7 @@ export function Header() {
               transition-all
               hover:text-[var(--color-primary)]
             "
-            href="#experiences"
+            href="/#experiences"
           >
             EXPERIENCES
           </a>
@@ -80,7 +80,7 @@ export function Header() {
               transition-all
               hover:text-[var(--color-primary)]
             "
-            href="#projects"
+            href="/#projects"
           >
             PROJECTS
           </a>
@@ -89,7 +89,7 @@ export function Header() {
               transition-all
               hover:text-[var(--color-primary)]
             "
-            href="#skills"
+            href="/#skills"
           >
             SKILLS
           </a>

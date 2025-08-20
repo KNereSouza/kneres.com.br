@@ -113,7 +113,7 @@ export function Header() {
           "
         >
           <a
-            href="#contact"
+            href="/#contact"
             className="
               absolute flex items-center justify-center
               bg-[var(--color-secondary)]

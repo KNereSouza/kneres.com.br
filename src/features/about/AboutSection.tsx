@@ -1,13 +1,16 @@
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi";
 import styles from "./styles.module.css";
 
 export function AboutSection() {
+  const linkClasses =
+    "flex items-center justify-center gap-2 text-lg pt-2 pb-2 pl-6 pr-6 outline outline-[var(--color-primary)] text-[var(--color-primary)] bg-[var(--color-secondary)] transition-colors hover:bg-[var(--color-primary)] hover:text-[var(--color-secondary)] rounded-md";
+
   return (
     <section
       id="about"
-      className="relative w-screen h-screen flex items-center justify-center font-sans-serif bg-[var(--color-secondary)] text-white"
+      className="relative w-screen min-h-screen flex items-center justify-center font-sans-serif bg-[var(--color-secondary)] text-white"
     >
-      <div className="z-10 flex flex-col gap-8 w-200 text-lg">
+      <div className="z-10 flex flex-col gap-8 w-11/12 max-w-2xl text-lg">
         <h2 className="font-bold text-5xl">
           <span className="text-[var(--color-primary)]">#</span>ABOUT ME 🙋🏻‍♂️
         </h2>
@@ -57,30 +60,27 @@ export function AboutSection() {
           high-performance digital products, and I invite you to explore my
           projects to see how I can bring value to your next venture.
         </p>
-        <div className="flex flex-row gap-8 font-monospace">
+        <div className="flex flex-row gap-4 font-monospace">
           <a
             href="https://github.com/KNereSouza"
             target="_blank"
-            className="flex items-center justify-center gap-2 text-lg pt-2.5 pb-2.5 pl-8 pr-8 outline-solid outline outline-[var(--color-primary)] text-[var(--color-primary)] bg-[var(--color-secondary)] transition-all hover:bg-[var(--color-primary)] hover:text-[var(--color-secondary)]"
+            className={`${linkClasses}`}
           >
-            GitHub
-            <FaGithub />
+            <FiGithub /> GitHub
           </a>
           <a
             href="https://www.linkedin.com/in/kneresouza/"
             target="_blank"
-            className="flex items-center justify-center gap-2 text-lg pt-2.5 pb-2.5 pl-8 pr-8 outline-solid outline outline-[var(--color-primary)] text-[var(--color-primary)] bg-[var(--color-secondary)] transition-all hover:bg-[var(--color-primary)] hover:text-[var(--color-secondary)]"
+            className={`${linkClasses}`}
           >
-            LinkedIn
-            <FaLinkedin />
+            <FiLinkedin /> LinkedIn
           </a>
           <a
             href="https://www.instagram.com/neres.js/"
             target="_blank"
-            className="flex items-center justify-center gap-2 text-lg pt-2.5 pb-2.5 pl-8 pr-8 outline-solid outline outline-[var(--color-primary)] text-[var(--color-primary)] bg-[var(--color-secondary)] transition-all hover:bg-[var(--color-primary)] hover:text-[var(--color-secondary)]"
+            className={`${linkClasses}`}
           >
-            Instagram
-            <FaInstagram />
+            <FiInstagram /> Instagram
           </a>
         </div>
       </div>

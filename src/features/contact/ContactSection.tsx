@@ -7,17 +7,17 @@ export function ContactSection() {
     {
       name: "GitHub",
       icon: <FiGithub size={24} />,
-      url: "https://github.com/your-username",
+      url: "https://github.com/KNereSouza",
     },
     {
       name: "LinkedIn",
       icon: <FiLinkedin size={24} />,
-      url: "https://linkedin.com/in/your-username",
+      url: "https://linkedin.com/in/kneresouza",
     },
     {
       name: "Instagram",
       icon: <FiInstagram size={24} />,
-      url: "https://instagram.com/your-username",
+      url: "https://instagram.com/neres.js",
     },
   ];
 

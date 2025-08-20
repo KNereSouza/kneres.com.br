@@ -2,7 +2,10 @@ import { ProjectCard } from "../../components/cards/ProjectCard";
 
 export function ProjectsSection() {
   return (
-    <section className="flex flex-col p-8 items-center justify-center w-screen min-h-screen text-white bg-[var(--color-secondary)] gap-8">
+    <section
+      id="projects"
+      className="flex flex-col p-8 items-center justify-center w-screen min-h-screen text-white bg-[var(--color-secondary)] gap-8"
+    >
       <h2 className="font-bold text-5xl font-sans-serif">
         <span className="text-[var(--color-primary)]">#</span>PROJECTS
       </h2>

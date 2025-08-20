@@ -1,4 +1,5 @@
 import { FiGithub } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 
 interface ProjectCardProps {
   projectName: string;
@@ -53,7 +54,7 @@ export function ProjectCard(props: ProjectCardProps) {
           target="__blank"
           href={props.sourceCodeURL}
         >
-          {"--> "}
+          <FiArrowRight />
           <span className="underline font-monospace">see on GitHub</span>
           <FiGithub />
         </a>

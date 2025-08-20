@@ -8,6 +8,11 @@
   --font-space-mono: "Space Mono", monospace;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .font-sans-serif {
   font-family: var(--font-space-grotesk);
 }

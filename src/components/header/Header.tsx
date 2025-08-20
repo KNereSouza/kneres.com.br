@@ -39,7 +39,7 @@ export function Header() {
   return (
     <>
       <div
-        className={`fixed w-screen z-30 transition-transform duration-500 text-white ${
+        className={`fixed w-full z-30 transition-transform duration-500 text-white ${
           show ? "translate-y-0" : "-translate-y-full"
         }`}
       >

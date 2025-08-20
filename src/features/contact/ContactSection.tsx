@@ -82,7 +82,7 @@ export function ContactSection() {
         </div>
       </div>
       <div
-        className={`absolute z-0 ${styles.contactBackground} blur-xs min-w-screen min-h-screen`}
+        className={`absolute z-0 ${styles.contactBackground} blur-xs w-full min-h-screen`}
       ></div>
     </section>
   );

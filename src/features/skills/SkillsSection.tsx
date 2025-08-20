@@ -107,7 +107,7 @@ const skills: SkillCardProps[] = [
 export function SkillsSection() {
   return (
     <section
-      className="relative flex flex-col items-center justify-center w-screen min-h-screen text-white bg-[var(--color-secondary)] gap-12 md:gap-16 py-20 px-6"
+      className="relative flex flex-col items-center justify-center w-full min-h-screen text-white bg-[var(--color-secondary)] gap-12 md:gap-16 py-20 px-6"
       id="skills"
     >
       <h2 className="z-10 font-bold text-4xl md:text-5xl font-sans-serif text-center">

@@ -8,7 +8,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="relative w-screen min-h-screen flex items-center justify-center font-sans-serif bg-[var(--color-secondary)] text-white py-20 px-6"
+      className="relative w-full min-h-screen flex items-center justify-center font-sans-serif bg-[var(--color-secondary)] text-white py-20 px-6"
     >
       <div className="z-10 flex flex-col gap-6 md:gap-8 w-full max-w-3xl text-base md:text-lg">
         <h2 className="font-bold text-4xl md:text-5xl">

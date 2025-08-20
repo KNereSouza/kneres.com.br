@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 
 export function HeroSection() {
   return (
-    <section className="font-sans-serif bg-[var(--color-secondary)] w-screen h-screen flex flex-col items-center justify-center text-center gap-6 md:gap-8 text-white px-6">
+    <section className="font-sans-serif bg-[var(--color-secondary)] w-full h-screen flex flex-col items-center justify-center text-center gap-6 md:gap-8 text-white px-6">
       <div className={`${styles.blobContainer}`}>
         <div className={`${styles.blob}`}></div>
         <div className={`${styles.blob}`}></div>

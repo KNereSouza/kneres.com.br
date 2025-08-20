@@ -5,7 +5,7 @@ export function ExperiencesSection() {
   return (
     <section
       id="experiences"
-      className="relative font-sans-serif w-screen min-h-screen flex flex-col items-center justify-center gap-12 md:gap-16 text-white bg-[var(--color-secondary)] py-20 px-6"
+      className="relative font-sans-serif w-full min-h-screen flex flex-col items-center justify-center gap-12 md:gap-16 text-white bg-[var(--color-secondary)] py-20 px-6"
     >
       <div className="z-10 flex flex-col items-center justify-center gap-12 md:gap-16 w-full">
         <h2 className="font-bold text-4xl md:text-5xl text-center">

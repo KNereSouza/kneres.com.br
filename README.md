@@ -8,11 +8,10 @@ This portfolio is a single-page application built with React, TypeScript, and Vi
 
 - **📱 Fully Responsive Design:** Meticulously crafted to provide an optimal viewing experience across all devices, from small mobile screens to large desktop monitors.
 - **🎨 Dynamic & Interactive UI:**
-  - **Interactive Particle Background:** An engaging "constellation" effect on the Hero section that reacts to mouse movement, built with `tsParticles`.
   - **3D Flipping Skill Cards:** An eye-catching 3D animation on the skill cards that reveals more information on hover.
   - **Modern Card Effects:** Custom-styled project and experience cards with a unique shadow/offset effect on hover.
 - **🚀 Modern Tech Stack:** Built with the latest industry-standard technologies for a high-performance and scalable application.
-- ** Interactive Navbar:** The header smartly hides on scroll-down and reappears on scroll-up for a seamless navigation experience.
+- **Interactive Navbar:** The header smartly hides on scroll-down and reappears on scroll-up for a seamless navigation experience.
 - **📝 Conventional Commits:** The project's version history follows the Conventional Commits specification for clear and maintainable commits.
 
 ## 🛠️ Tech Stack
@@ -20,7 +19,6 @@ This portfolio is a single-page application built with React, TypeScript, and Vi
 - **Frontend:** [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
 - **Build Tool:** [Vite](https://vitejs.dev/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Animations & Effects:** [tsParticles](https://particles.js.org/), CSS Animations
 - **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
 - **Linting/Formatting:** ESLint, Prettier (recommended setup)
 

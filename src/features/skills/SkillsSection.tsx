@@ -11,7 +11,6 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import styles from "./styles.module.css";
-
 import type { SkillCardProps } from "../../components/cards/SkillCard";
 
 const skills: SkillCardProps[] = [
@@ -36,7 +35,7 @@ const skills: SkillCardProps[] = [
     name: "Express.js",
     type: "Backend Framework",
     description:
-      "Express.js is a minimal and flexible Node.js web framework that provides a robust set of features for building APIs and web applications.",
+      "Express.js is Node.js web framework that provides a robust set of features for building APIs and web applications.",
     frontBg: "bg-gray-700",
   },
   {
@@ -44,7 +43,7 @@ const skills: SkillCardProps[] = [
     name: "PostgreSQL",
     type: "Relational Database",
     description:
-      "PostgreSQL is a powerful, open-source relational database known for reliability, scalability, and advanced SQL features.",
+      "PostgreSQL is a powerful relational database known for reliability, scalability, and advanced SQL features.",
     frontBg: "bg-blue-700",
   },
   {
@@ -52,7 +51,7 @@ const skills: SkillCardProps[] = [
     name: "Sequelize",
     type: "ORM for Node.js",
     description:
-      "Sequelize is a promise-based ORM for Node.js that supports multiple SQL databases and simplifies database interaction.",
+      "Sequelize is a ORM for Node.js that supports multiple SQL databases and simplifies database interaction.",
     frontBg: "bg-indigo-600",
   },
   {
@@ -84,7 +83,7 @@ const skills: SkillCardProps[] = [
     name: "Next.js",
     type: "React Framework",
     description:
-      "Next.js is a React framework for production that enables hybrid static & server rendering, API routes, and built-in performance optimizations.",
+      "Next.js is a React framework that enables hybrid static & server rendering, API routes, and built-in performance optimizations.",
     frontBg: "bg-black",
   },
   {
@@ -92,7 +91,7 @@ const skills: SkillCardProps[] = [
     name: "TypeScript",
     type: "Programming Language",
     description:
-      "TypeScript is a strongly typed superset of JavaScript that compiles to plain JavaScript, adding static types for scalability.",
+      "TypeScript is a strongly typed superset of JavaScript, adding static types for scalability.",
     frontBg: "bg-blue-500",
   },
   {
@@ -108,19 +107,19 @@ const skills: SkillCardProps[] = [
 export function SkillsSection() {
   return (
     <section
-      className="relative flex flex-col p-8 items-center justify-center w-screen min-h-screen text-white bg-[var(--color-secondary)] gap-8"
+      className="relative flex flex-col items-center justify-center w-screen min-h-screen text-white bg-[var(--color-secondary)] gap-12 md:gap-16 py-20 px-6"
       id="skills"
     >
-      <h2 className="z-10 font-bold text-5xl font-sans-serif">
+      <h2 className="z-10 font-bold text-4xl md:text-5xl font-sans-serif text-center">
         <span className="text-[var(--color-primary)]">#</span>SKILLS
       </h2>
-
-      <div className="z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
-        {skills.map((skill, index) => (
-          <SkillCard key={index} {...skill} />
-        ))}
+      <div className="z-10 w-full max-w-7xl">
+        <div className="flex flex-row flex-wrap justify-center gap-8">
+          {skills.map((skill, index) => (
+            <SkillCard key={index} {...skill} />
+          ))}
+        </div>
       </div>
-
       <div
         className={`absolute z-0 ${styles.skillsBackground} w-full h-full`}
       ></div>

@@ -10,7 +10,7 @@ export interface SkillCardProps {
 
 export function SkillCard(props: SkillCardProps) {
   return (
-    <div className="h-64 w-64 [perspective:1000px] group cursor-pointer">
+    <div className="h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 [perspective:1000px] group cursor-pointer">
       <div
         className="
           relative 
@@ -21,7 +21,6 @@ export function SkillCard(props: SkillCardProps) {
           group-hover:[transform:rotateY(180deg)]
         "
       >
-        {/* Front */}
         <div
           className={`
             absolute inset-0 
@@ -32,17 +31,15 @@ export function SkillCard(props: SkillCardProps) {
             ${props.frontBg ?? "bg-white"} 
           `}
         >
-          <props.icon className="text-9xl text-white" />
+          <props.icon className="text-7xl sm:text-8xl md:text-9xl text-white" />
         </div>
-
-        {/* Back */}
         <div
           className={`
             absolute inset-0 
             h-full w-full 
             rounded-xl 
             ${props.frontBg ? props.frontBg : "bg-black"} 
-            px-6 py-4
+            p-4 sm:p-5 md:p-6
             flex flex-col items-center justify-center
             text-center 
             text-white 
@@ -50,9 +47,13 @@ export function SkillCard(props: SkillCardProps) {
             [backface-visibility:hidden]
           `}
         >
-          <h3 className="text-xl font-bold font-sans-serif">{props.name}</h3>
-          <h4 className="text-sm italic mb-2 font-sans-serif">{props.type}</h4>
-          <p className="text-sm font-monospace">{props.description}</p>
+          <h3 className="text-base sm:text-lg md:text-xl font-bold font-sans-serif">
+            {props.name}
+          </h3>
+          <h4 className="text-xs italic mb-2 font-sans-serif">{props.type}</h4>
+          <p className="text-xs sm:text-sm font-monospace">
+            {props.description}
+          </p>
         </div>
       </div>
     </div>

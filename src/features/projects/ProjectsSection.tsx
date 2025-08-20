@@ -4,9 +4,9 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="flex flex-col p-8 items-center justify-center w-screen min-h-screen text-white bg-[var(--color-secondary)] gap-8"
+      className="flex flex-col p-8 items-center justify-center w-screen min-h-screen text-white bg-[var(--color-secondary)] gap-8 font-sans-serif"
     >
-      <h2 className="font-bold text-5xl font-sans-serif">
+      <h2 className="font-bold text-4xl md:text-5xl text-center">
         <span className="text-[var(--color-primary)]">#</span>PROJECTS
       </h2>
 

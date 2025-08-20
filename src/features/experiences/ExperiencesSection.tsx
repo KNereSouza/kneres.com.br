@@ -5,13 +5,13 @@ export function ExperiencesSection() {
   return (
     <section
       id="experiences"
-      className="relative font-sans-serif p-16 w-screen min-h-screen flex flex-col items-center justify-center gap-16 text-white bg-[var(--color-secondary)]"
+      className="relative font-sans-serif w-screen min-h-screen flex flex-col items-center justify-center gap-12 md:gap-16 text-white bg-[var(--color-secondary)] py-20 px-6"
     >
-      <div className="z-10 flex flex-col items-center justify-center gap-16">
-        <h2 className="font-bold text-5xl">
+      <div className="z-10 flex flex-col items-center justify-center gap-12 md:gap-16 w-full">
+        <h2 className="font-bold text-4xl md:text-5xl text-center">
           <span className="text-[var(--color-primary)]">#</span>EXPERIENCES
         </h2>
-        <div className="flex flex-col gap-16">
+        <div className="flex flex-col items-center gap-12 md:gap-16 w-full">
           <ExperienceCard
             jobTitle="Web Developer 🌐"
             companyName="Freelance"
@@ -19,7 +19,6 @@ export function ExperiencesSection() {
             endDate="Current"
             description="Design and development of responsive, dynamic websites and web applications using modern technologies like React, Next.js, Node.js, and Tailwind CSS. Skilled in both front-end and back-end solutions."
           />
-
           <ExperienceCard
             jobTitle="Motorcycle Parts Sales Assistant 🛠️"
             companyName="Mael Motos"
@@ -27,7 +26,6 @@ export function ExperiencesSection() {
             endDate="May 2025"
             description="Customer-focused sales assistant with hands-on experience in motorcycle parts, accessories, and service recommendations. Skilled in helping clients choose the right parts."
           />
-
           <ExperienceCard
             jobTitle="Art Teacher ​👨🏻‍🏫​"
             companyName="Escola Municipal Cecília Meireles"

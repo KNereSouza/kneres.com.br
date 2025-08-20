@@ -44,7 +44,7 @@ export function Header() {
         }`}
       >
         <div className="absolute w-full h-full bg-[#0a182eb6] backdrop-blur-sm"></div>
-        <header className="relative flex flex-row py-6 px-6 lg:px-2 items-center justify-between lg:justify-around font-sans-serif">
+        <header className="relative flex flex-row py-4 px-6 lg:px-2 items-center justify-between lg:justify-around font-sans-serif">
           <a href="/" onClick={() => setIsMenuOpen(false)}>
             <img
               src={Logo}

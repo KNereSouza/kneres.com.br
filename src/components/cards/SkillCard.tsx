@@ -18,21 +18,36 @@ export function SkillCard(props: SkillCardProps) {
           rounded-xl shadow-xl 
           transition-all duration-500
           [transform-style:preserve-3d] 
-          group-hover:[transform:rotateY(180deg)]
-        "
+          md:group-hover:[transform:rotateY(180deg)]
+        " // The flip effect is now active only on md screens and up
       >
+        {/* Front Face */}
         <div
           className={`
             absolute inset-0 
-            flex items-center justify-center 
+            flex flex-col items-center justify-center 
             h-full w-full 
             rounded-xl shadow-xl shadow-black/40 
             [backface-visibility:hidden]
+            p-4 text-center gap-2
             ${props.frontBg ?? "bg-white"} 
           `}
         >
+          {/* Icon is always visible */}
           <props.icon className="text-7xl sm:text-8xl md:text-9xl text-white" />
+
+          {/* Name and Type are visible ONLY on small screens (mobile) */}
+          <div className="md:hidden">
+            <h3 className="text-lg font-bold font-sans-serif text-white drop-shadow-md">
+              {props.name}
+            </h3>
+            <h4 className="text-sm italic text-white/90 font-sans-serif">
+              {props.type}
+            </h4>
+          </div>
         </div>
+
+        {/* Back Face (this will only be visible on md screens and up due to the hover change) */}
         <div
           className={`
             absolute inset-0 

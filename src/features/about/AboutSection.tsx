@@ -88,7 +88,7 @@ export function AboutSection() {
         </div>
       </div>
       <div
-        className={`absolute z-0 ${styles.aboutBackground} blur-sm w-screen h-screen`}
+        className={`absolute z-0 ${styles.aboutBackground} blur-sm w-full h-screen`}
       ></div>
     </section>
   );

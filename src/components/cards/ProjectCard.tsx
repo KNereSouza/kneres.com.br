@@ -49,15 +49,17 @@ export function ProjectCard(props: ProjectCardProps) {
 
         <p className="font-sans-serif">{props.description}</p>
 
-        <a
-          className="flex items-center gap-2 font-bold text-[var(--color-primary)]"
-          target="__blank"
-          href={props.sourceCodeURL}
-        >
+        <div className="flex items-center gap-2 font-bold text-[var(--color-primary)]">
           <FiArrowRight />
-          <span className="underline font-monospace">see on GitHub</span>
+          <a
+            className="underline font-monospace"
+            target="__blank"
+            href={props.sourceCodeURL}
+          >
+            see on GitHub
+          </a>
           <FiGithub />
-        </a>
+        </div>
       </div>
     </div>
   );

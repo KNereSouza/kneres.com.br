@@ -1,0 +1,20 @@
+@keyframes bounceSlow {
+  0% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+.hoverAnimation:hover .bounceArrow {
+  animation: bounceSlow 1s infinite;
+}
+
+.hoverAnimation:hover {
+  box-shadow: 0 0 20px var(--color-primary / 25);
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}

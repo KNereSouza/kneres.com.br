@@ -81,7 +81,7 @@ export function ContactForm() {
       w-full p-8
       bg-[var(--color-secondary)]/10 backdrop-blur-lg
       border border-[var(--color-primary)]/25
-      rounded-xl shadow-2xl
+      shadow-2xl
       text-[var(--color-primary)]
     "
     >
@@ -101,7 +101,7 @@ export function ContactForm() {
             placeholder="e.g., John Doe"
             className="
             w-full pl-12 pr-4 py-3
-            bg-[var(--color-secondary)]/50 border border-[var(--color-primary)]/25 rounded-lg
+            bg-[var(--color-secondary)]/50 border border-[var(--color-primary)]/25
             placeholder-gray-400
             focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
             transition-all duration-300
@@ -126,7 +126,7 @@ export function ContactForm() {
             placeholder="you@example.com"
             className="
             w-full pl-12 pr-4 py-3
-            bg-[var(--color-secondary)]/50 border border-[var(--color-primary)]/25 rounded-lg
+            bg-[var(--color-secondary)]/50 border border-[var(--color-primary)]/25
             placeholder-gray-400
             focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
             transition-all duration-300
@@ -151,7 +151,7 @@ export function ContactForm() {
             placeholder="Your message here..."
             className="
             w-full pl-12 pr-4 py-3
-            bg-[var(--color-secondary)]/50 border border-[var(--color-primary)]/25 rounded-lg
+            bg-[var(--color-secondary)]/50 border border-[var(--color-primary)]/25
             placeholder-gray-400
             focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
             transition-all duration-300
@@ -168,12 +168,12 @@ export function ContactForm() {
           disabled={isLoading}
           className="
           flex items-center justify-center gap-3 w-full py-3 px-4
-          bg-[var(--color-primary)] hover:bg-[var(--color-primary)]/80
-          text-[var(--color-secondary)] font-bold
-          rounded-lg shadow-lg
+          bg-[var(--color-primary)]/80 hover:bg-[var(--color-primary)] text-[var(--color-secondary)]
+          font-bold
+          hover:shadow-[0_0_20px_var(--color-primary)]/40
           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-secondary focus:ring-primary
           transition-all duration-300 ease-in-out cursor-pointer
-          disabled:opacity-50 disabled:cursor-not-allowed
+          disabled:opacity-50 disabled:cursor-not-allowed font-monospace
         "
         >
           {isLoading ? (
@@ -194,7 +194,7 @@ export function ContactForm() {
           )}
         </button>
         {feedbackMessage && !isSuccess && (
-          <p className="text-red-400 text-center">{feedbackMessage}</p>
+          <p className="text-red-500 text-center">{feedbackMessage}</p>
         )}
       </div>
     </form>

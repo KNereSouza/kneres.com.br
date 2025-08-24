@@ -15,7 +15,7 @@ export function SkillCard(props: SkillCardProps) {
         className="
           relative 
           h-full w-full 
-          rounded-xl shadow-xl 
+          shadow-xl 
           transition-all duration-500
           [transform-style:preserve-3d] 
           md:group-hover:[transform:rotateY(180deg)]
@@ -27,7 +27,7 @@ export function SkillCard(props: SkillCardProps) {
             absolute inset-0 
             flex flex-col items-center justify-center 
             h-full w-full 
-            rounded-xl shadow-xl shadow-black/40 
+            shadow-xl shadow-black/40 
             [backface-visibility:hidden]
             p-4 text-center gap-2
             ${props.frontBg ?? "bg-white"} 
@@ -52,7 +52,6 @@ export function SkillCard(props: SkillCardProps) {
           className={`
             absolute inset-0 
             h-full w-full 
-            rounded-xl 
             ${props.frontBg ? props.frontBg : "bg-black"} 
             p-4 sm:p-5 md:p-6
             flex flex-col items-center justify-center

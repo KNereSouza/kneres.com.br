@@ -1,5 +1,6 @@
 import { FiGithub, FiLinkedin, FiInstagram, FiArrowUp } from "react-icons/fi";
-
+import { useEffect, useState } from "react";
+import styles from "./styles.module.css";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
@@ -27,25 +28,33 @@ const socialLinks = [
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const [showButton, setShowButton] = useState(false);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const userReachedTheEnd = () => {
+    return (
+      window.innerHeight + window.scrollY >= document.body.offsetHeight - 64
+    );
+  };
+
+  useEffect(() => {
+    const handleScroll = () => setShowButton(userReachedTheEnd());
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <footer className="w-full bg-[var(--color-secondary)] text-gray-400 font-sans-serif p-8 border-t border-[var(--color-primary)]/20">
       <div className="w-full max-w-6xl mx-auto flex flex-col items-center gap-10">
         {/* --- Top Section: Links and Socials --- */}
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Branding/Name */}
           <div className="text-2xl font-bold text-white font-monospace">
             kneres.com.br<span className="text-[var(--color-primary)]">.</span>
           </div>
 
-          {/* Navigation Links */}
           <nav>
             <ul className="flex items-center gap-6">
               {navLinks.map((link) => (
@@ -61,7 +70,6 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* Social Icons */}
           <div className="flex items-center gap-5">
             {socialLinks.map((link) => (
               <a
@@ -78,16 +86,31 @@ export function Footer() {
           </div>
         </div>
 
-        {/* --- Bottom Section: Copyright and Back to Top --- */}
+        {/* --- Bottom Section --- */}
         <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6 pt-8 border-t border-[var(--color-primary)]/10 text-sm">
           <p>&copy; {currentYear} Kauã Neres de Souza. All rights reserved.</p>
 
           <button
             onClick={scrollToTop}
             aria-label="Back to top"
-            className="flex items-center gap-2 transition-colors hover:text-[var(--color-primary)]"
+            className={`
+              group ${styles.hoverAnimation}
+              flex pr-4 pl-3 py-1 outline outline-[var(--color-primary)]
+              text-center items-center gap-1 transition-all duration-500 ease-in-out
+              text-[var(--color-primary)] 
+              hover:text-[var(--color-secondary)] 
+              hover:bg-[var(--color-primary)] 
+              hover:shadow-[0_0_20px_var(--color-primary)]/40
+              cursor-pointer
+              ${
+                showButton
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-2 pointer-events-none"
+              }
+            `}
           >
-            Back to Top <FiArrowUp />
+            <FiArrowUp className={`bounceArrow ${styles.bounceArrow}`} />
+            Back to Top
           </button>
         </div>
       </div>

@@ -100,9 +100,9 @@ export function Header() {
               className="text-white focus:outline-none"
             >
               {isMenuOpen ? (
-                <HiX className="w-8 h-8" />
+                <HiX className="w-8 h-8 cursor-pointer transition-all ease-in-out duration-250 hover:text-[var(--color-primary)]" />
               ) : (
-                <HiMenu className="w-8 h-8" />
+                <HiMenu className="w-8 h-8 cursor-pointer transition-all ease-in-out duration-250 hover:text-[var(--color-primary)]" />
               )}
             </button>
           </div>

@@ -2,9 +2,8 @@ import styles from "./styles.module.css";
 
 export function HeroSection() {
   return (
-    <section className="font-sans-serif bg-[var(--color-secondary)] w-full h-screen flex flex-col items-center justify-center text-center gap-6 md:gap-8 text-white px-6">
+    <section className="font-sans-serif p-22 bg-[var(--color-secondary)] w-full min-h-screen flex flex-col items-center justify-center text-center gap-6 md:gap-8 text-white px-6">
       <div className={`${styles.blobContainer}`}>
-        <div className={`${styles.blob}`}></div>
         <div className={`${styles.blob}`}></div>
         <div className={`${styles.blob}`}></div>
         <div className={`${styles.blob}`}></div>
@@ -13,7 +12,9 @@ export function HeroSection() {
         <div className={`${styles.blob}`}></div>
       </div>
 
-      <p className="z-10 font-bold text-lg md:text-xl">Hi, i'm Kauã 👋🏼</p>
+      <p className="z-10 font-bold text-lg md:text-xl">
+        Hi, i'm Kauã <span className="animate-wave text-2xl">👋🏼</span>
+      </p>
       <h1 className="z-10 font-bold text-4xl sm:text-5xl md:text-6xl">
         <span
           className={`${styles.textOutline} outline-[var(--color-primary)] text-6xl sm:text-7xl lg:text-8xl`}

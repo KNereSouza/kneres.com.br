@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 
 export function AboutSection() {
   const linkClasses =
-    "flex items-center justify-center gap-2 text-base md:text-lg py-2 px-4 md:px-6 outline outline-[var(--color-primary)] text-[var(--color-primary)] bg-[var(--color-secondary)] transition-colors hover:bg-[var(--color-primary)] hover:text-[var(--color-secondary)] rounded-md";
+    "flex items-center justify-center gap-2 text-base md:text-lg py-2 px-4 md:px-6 outline outline-[var(--color-primary)] text-[var(--color-primary)] bg-[var(--color-secondary)] transition-colors hover:bg-[var(--color-primary)] hover:text-[var(--color-secondary)]";
 
   return (
     <section

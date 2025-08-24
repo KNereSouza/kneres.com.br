@@ -1,9 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+@import "tailwindcss";
+
 :root {
   --color-primary: #64ffda;
   --color-secondary: #0a182e;
+
+  --rgb-primary: 100, 255, 218;
+
+  --color-light-green: #a7ffe3;
+  --rgb-light-green: 167, 255, 227;
+
+  --color-dark-teal: #00c2b8;
+  --rgb-dark-teal: 0, 194, 184;
+
   --font-space-grotesk: "Space Grotesk", sans-serif;
   --font-space-mono: "Space Mono", monospace;
 }
@@ -21,4 +32,50 @@ body {
   font-family: var(--font-space-mono);
 }
 
-@import "tailwindcss";
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-wave {
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
